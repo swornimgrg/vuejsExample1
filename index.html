@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Vue Tutorial</title>
+    <script src="vue.js"></script>
+  </head>
+
+  <body>
+    <h1>TODO LIST</h1>
+
+    <ul id="exercise-1">
+      <li v-for="item in items" :key="item.message">{{item.message}}</li>
+    </ul>
+
+    <script>
+      new Vue({
+        el: "#exercise-1",
+        data: {
+          items: [
+            { message: "JS design patterns" },
+            { message: "VUE lifecycle" },
+            { message: "VUE todolist" },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
